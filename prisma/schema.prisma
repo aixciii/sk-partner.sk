@@ -1,0 +1,153 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  company      String?
+  ico          String?
+  phone        String?
+  address      String?
+  city         String?
+  zip          String?
+  role         Role     @default(B2B)
+  discount     Float    @default(0)
+  approved     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  orders       Order[]
+  partnerTier        PartnerTier @default(BASIC)
+  quarterlyVolumeEur Float       @default(0)
+  tierUpdatedAt      DateTime?
+}
+
+enum Role {
+  ADMIN
+  B2B
+  B2C
+}
+
+enum PartnerTier {
+  BASIC
+  PREMIUM
+  GOLD
+}
+
+model Category {
+  id       String    @id @default(cuid())
+  slug     String    @unique
+  name     String
+  order    Int       @default(0)
+  products Product[]
+}
+
+model Product {
+  id          String      @id @default(cuid())
+  slug        String      @unique
+  name        String
+  model       String
+  categoryId  String
+  category    Category    @relation(fields: [categoryId], references: [id])
+  description String?
+  specs       Json?
+  priceNet    Float
+  vatRate     Float       @default(0.23)
+  inStock     Boolean     @default(true)
+  stockQty    Int         @default(0)
+  stockStatus String      @default("instock")
+  transitQty    Int       @default(0)
+  transitDate   String?
+  wholesalePrices Json?
+  costPrice     Float?
+  imageUrl    String?
+  featured    Boolean     @default(false)
+  active      Boolean     @default(true)
+  brand       String      @default("deye")
+  sortOrder   Int         @default(0)
+  createdAt   DateTime    @default(now())
+  orderItems  OrderItem[]
+
+  shortLead              String?
+  quickStats             Json?
+  features               Json?
+  usageAndCompatibility  String?
+  compatibleDevices      Json?
+  accessories            Json?
+  warranty               String?
+  faq                    Json?
+  specGroups             Json?
+  metaTitle              String?
+  metaDescription        String?
+  ogImage                String?
+  gallery                String[]  @default([])
+  downloads              Json?
+  stockNote              String?
+}
+
+model Order {
+  id         String      @id @default(cuid())
+  orderNum   String      @unique
+  userId     String?
+  user       User?       @relation(fields: [userId], references: [id])
+  guestName  String?
+  guestEmail String?
+  company    String?
+  ico        String?
+  address    String?
+  city       String?
+  zip        String?
+  phone      String?
+  note       String?
+  status     OrderStatus @default(NEW)
+  totalNet   Float
+  totalVat   Float
+  totalGross Float
+  items      OrderItem[]
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+}
+
+enum OrderStatus {
+  NEW
+  CONFIRMED
+  INVOICED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id])
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  name      String
+  model     String
+  qty       Int
+  priceNet  Float
+  vatRate   Float
+  totalNet  Float
+}
+
+// Already handled by existing fields
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  perex       String
+  content     String
+  imageUrl    String?
+  published   Boolean  @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
