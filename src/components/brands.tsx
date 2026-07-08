@@ -44,7 +44,7 @@ export function Brands() {
               <p className="mt-2 leading-relaxed text-muted-foreground">
                 {brand.desc}
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+              <span className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
                 Zobraziť produkty
                 <ArrowRight
                   className="h-4 w-4 transition-transform group-hover:translate-x-1"
