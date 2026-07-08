@@ -2,13 +2,15 @@ import { Suspense } from "react";
 import { Navbar } from "@/components/navbar";
 import { SiteFooter } from "@/components/site-footer";
 import { CatalogContent } from "@/components/catalog-content";
+import { fetchProducts } from "@/lib/products";
 
 export const metadata = {
   title: "Katalog produktov | SK Partner",
   description: "Oficialny distributor Deye, FoxESS a Solis na Slovensku. Hybridne invertory, sietove invertory, bateriove uloziska.",
 };
 
-export default function CatalogPage() {
+export default async function CatalogPage() {
+  const initialProducts = await fetchProducts();
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
@@ -23,7 +25,7 @@ export default function CatalogPage() {
             </p>
           </div>
           <Suspense fallback={<div>Nacitavam...</div>}>
-            <CatalogContent />
+            <CatalogContent initialProducts={initialProducts} />
           </Suspense>
         </div>
       </main>

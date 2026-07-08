@@ -67,7 +67,7 @@ const brandFilters = [
   { id: "byd", name: "BYD" },
 ];
 
-export function CatalogContent({ defaultCategory }: { defaultCategory?: string }) {
+export function CatalogContent({ defaultCategory, initialProducts }: { defaultCategory?: string; initialProducts?: Product[] }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const slugToCategory: Record<string, string> = {
@@ -83,8 +83,8 @@ export function CatalogContent({ defaultCategory }: { defaultCategory?: string }
   const initialCategory = slugToCategory[rawCategory] || rawCategory
   const initialBrand = searchParams.get("brand") || "all"
 
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState<Product[]>(initialProducts ?? []);
+  const [loading, setLoading] = useState(!initialProducts);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<
@@ -94,8 +94,9 @@ export function CatalogContent({ defaultCategory }: { defaultCategory?: string }
   const [selectedPhase, setSelectedPhase] = useState("all");
   const [selectedBrand, setSelectedBrand] = useState(initialBrand);
 
-  // Fetch products from API
+  // Fetch products from API (skip if server already provided them)
   useEffect(() => {
+    if (initialProducts) return;
     async function loadProducts() {
       try {
         setLoading(true);

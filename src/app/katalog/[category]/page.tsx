@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Navbar } from "@/components/navbar";
 import { SiteFooter } from "@/components/site-footer";
 import { CatalogContent } from "@/components/catalog-content";
+import { fetchProducts } from "@/lib/products";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 
@@ -68,6 +69,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const meta = categoryMeta[category]
   if (!meta) notFound()
   const minPrice = await getCategoryMinPrice(category)
+  const initialProducts = await fetchProducts()
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -82,7 +84,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             </p>
           </div>
           <Suspense fallback={<div>Nacitavam...</div>}>
-            <CatalogContent defaultCategory={category} />
+            <CatalogContent defaultCategory={category} initialProducts={initialProducts} />
           </Suspense>
         </div>
       </main>

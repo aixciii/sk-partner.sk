@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { Header } from "@/components/header"
+import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { User, Building, Mail, Phone, ShoppingCart, Lock, CheckCircle, Clock } from "lucide-react"
 
@@ -24,7 +24,7 @@ export default function MojUcetPage() {
 
   if (loading) return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      <Navbar />
       <main className="flex-1 flex items-center justify-center">
         <div className="text-muted-foreground text-sm animate-pulse">Načítanie...</div>
       </main>
@@ -34,7 +34,7 @@ export default function MojUcetPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      <Navbar />
       <main className="flex-1 bg-muted/20 py-10">
         <div className="mx-auto max-w-3xl px-4 space-y-6">
 

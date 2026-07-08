@@ -57,17 +57,17 @@ export function ProductCard({ product }: { product: Product }) {
           )}
           <div className="mt-2">
             {product.stockStatus === 'onorder' ? (
-              <span className="inline-flex items-center gap-1 text-xs text-yellow-600">
-                <span className="h-2 w-2 rounded-full bg-yellow-500" />
+              <span className="inline-flex items-center gap-1 text-xs text-amber-700">
+                <span className="h-2 w-2 rounded-full bg-amber-600" />
                 Na objednávku
               </span>
             ) : product.stockStatus === 'outofstock' ? (
-              <span className="inline-flex items-center gap-1 text-xs text-red-500">
-                <span className="h-2 w-2 rounded-full bg-red-500" />
+              <span className="inline-flex items-center gap-1 text-xs text-red-600">
+                <span className="h-2 w-2 rounded-full bg-red-600" />
                 Vypredané
               </span>
             ) : (
-              <span className="inline-flex items-center gap-1 text-xs text-green-600">
+              <span className="inline-flex items-center gap-1 text-xs text-green-700">
                 <span className="h-2 w-2 rounded-full bg-green-600" />
                 Skladom
               </span>
@@ -92,14 +92,14 @@ export function ProductCard({ product }: { product: Product }) {
       </Link>
       <div className="p-4 pt-0">
         {product.priceHidden ? (
-          <Link href="/registracia" className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-medium bg-primary text-white hover:bg-blue-700 transition-all duration-300">
+          <Link href="/registracia" className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-medium bg-primary text-white hover:bg-primary/90 transition-all duration-300">
             Registrácia pre partnerov
           </Link>
         ) : product.priceExVat > 0 ? (
           <button
             onClick={handleAddToCart}
             className={`w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-medium transition-all duration-300 ${
-              added ? 'bg-green-600 text-white' : 'bg-primary text-white hover:bg-blue-700'
+              added ? 'bg-green-600 text-white' : 'bg-primary text-white hover:bg-primary/90'
             }`}
           >
             {added ? (
@@ -115,7 +115,7 @@ export function ProductCard({ product }: { product: Product }) {
             )}
           </button>
         ) : (
-          <Link href={`/produkt/${product.slug}`} className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-medium bg-primary text-white hover:bg-blue-700 transition-all duration-300">
+          <Link href={`/produkt/${product.slug}`} className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-medium bg-primary text-white hover:bg-primary/90 transition-all duration-300">
             Vyžiadať cenovú ponuku
           </Link>
         )}

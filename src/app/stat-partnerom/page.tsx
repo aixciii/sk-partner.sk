@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Header } from "@/components/header";
+import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ const faq = [
 export default function StatPartneromPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Navbar />
       <main className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
 
         <div className="mb-12">

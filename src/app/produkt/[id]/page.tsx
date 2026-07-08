@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Header } from "@/components/header";
+import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer";
 import { ProductDetail } from "@/components/product-detail";
 import { fetchProductBySlug } from "@/lib/products";
@@ -170,7 +170,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
       )}
-      <Header />
+      <Navbar />
       <main className="flex-1 bg-muted/20 py-8">
         <ProductDetail product={product} serverWholesalePrices={wholesalePrices} priceHidden={priceHidden} />
       </main>

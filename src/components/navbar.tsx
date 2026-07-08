@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useId, useState } from "react"
 import { ChevronDown, Phone, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/logo"
@@ -31,11 +31,76 @@ const spolocnostItems = [
   { label: "GDPR", href: "/gdpr" },
 ]
 
+function NavDropdown({
+  label,
+  href,
+  items,
+  menuWidthClass = "w-64",
+}: {
+  label: string
+  href: string
+  items: { label: string; href: string }[]
+  menuWidthClass?: string
+}) {
+  const [open, setOpen] = useState(false)
+  const menuId = `nav-dropdown-${useId()}`
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) setOpen(false)
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") setOpen(false)
+      }}
+    >
+      <div className="flex items-center">
+        <a
+          href={href}
+          onFocus={() => setOpen(true)}
+          className="rounded-md py-2 pl-3 text-sm font-medium text-foreground transition-colors hover:text-primary"
+        >
+          {label}
+        </a>
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-haspopup="true"
+          aria-controls={menuId}
+          aria-label={`${open ? "Zavrieť" : "Otvoriť"} podmenu ${label}`}
+          className="rounded-md p-2 text-foreground transition-colors hover:text-primary"
+          onClick={() => setOpen((v) => !v)}
+        >
+          <ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} />
+        </button>
+      </div>
+      {open && (
+        <div
+          id={menuId}
+          role="menu"
+          className={`absolute left-0 top-full z-50 ${menuWidthClass} rounded-lg border border-border bg-background shadow-lg`}
+        >
+          {items.map(item => (
+            <a
+              key={item.href}
+              href={item.href}
+              role="menuitem"
+              className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export function Navbar() {
   const [open, setOpen] = useState(false)
-  const [katalogOpen, setKatalogOpen] = useState(false)
-  const [znackyOpen, setZnackyOpen] = useState(false)
-  const [spolocnostOpen, setSpolocnostOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur">
@@ -45,54 +110,14 @@ export function Navbar() {
         </a>
 
         <nav className="hidden items-center gap-1 lg:flex">
-          <div className="relative" onMouseEnter={() => setKatalogOpen(true)} onMouseLeave={() => setKatalogOpen(false)}>
-            <a href="/katalog" className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:text-primary">
-              Katalóg <ChevronDown className="h-4 w-4" />
-            </a>
-            {katalogOpen && (
-              <div className="absolute left-0 top-full z-50 w-64 rounded-lg border border-border bg-background shadow-lg">
-                {katalogItems.map(item => (
-                  <a key={item.href} href={item.href} className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary">
-                    {item.label}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
+          <NavDropdown label="Katalóg" href="/katalog" items={katalogItems} menuWidthClass="w-64" />
 
           <a href="/dilerom" className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:text-primary">
             Dílerom
           </a>
 
-          <div className="relative" onMouseEnter={() => setZnackyOpen(true)} onMouseLeave={() => setZnackyOpen(false)}>
-            <a href="/katalog" className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:text-primary">
-              Značky <ChevronDown className="h-4 w-4" />
-            </a>
-            {znackyOpen && (
-              <div className="absolute left-0 top-full z-50 w-48 rounded-lg border border-border bg-background shadow-lg">
-                {znackyItems.map(item => (
-                  <a key={item.href} href={item.href} className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary">
-                    {item.label}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <div className="relative" onMouseEnter={() => setSpolocnostOpen(true)} onMouseLeave={() => setSpolocnostOpen(false)}>
-            <a href="/o-nas" className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:text-primary">
-              Spoločnosť <ChevronDown className="h-4 w-4" />
-            </a>
-            {spolocnostOpen && (
-              <div className="absolute left-0 top-full z-50 w-48 rounded-lg border border-border bg-background shadow-lg">
-                {spolocnostItems.map(item => (
-                  <a key={item.href} href={item.href} className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary">
-                    {item.label}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
+          <NavDropdown label="Značky" href="/katalog" items={znackyItems} menuWidthClass="w-48" />
+          <NavDropdown label="Spoločnosť" href="/o-nas" items={spolocnostItems} menuWidthClass="w-48" />
 
           <a href="/kontakt" className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:text-primary">
             Kontakt
@@ -112,7 +137,13 @@ export function Navbar() {
           </Button>
         </div>
 
-        <button className="inline-flex items-center justify-center rounded-md p-2 text-foreground lg:hidden" onClick={() => setOpen(v => !v)}>
+        <button
+          type="button"
+          aria-label={open ? "Zavrieť menu" : "Otvoriť menu"}
+          aria-expanded={open}
+          className="inline-flex items-center justify-center rounded-md p-2 text-foreground lg:hidden"
+          onClick={() => setOpen(v => !v)}
+        >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
