@@ -41,7 +41,7 @@ export default function AdminDashboard() {
     <div className="p-6 lg:p-8 max-w-7xl mx-auto">
       <div className="mb-8">
         <h1 className="text-white text-2xl font-bold">Dashboard</h1>
-        <p className="text-gray-500 text-sm mt-1">Prehľad aktivít deyesolar.sk</p>
+        <p className="text-gray-500 text-sm mt-1">Prehľad aktivít sk-partner.sk</p>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         {cards.map(({ label, value, sub, icon: Icon, color, href }) => (

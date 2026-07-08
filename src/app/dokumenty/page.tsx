@@ -4,7 +4,7 @@ import { FileText, Download, ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Dokumenty a manuály | DeyeSolar.sk",
+  title: "Dokumenty a manuály | SK Partner",
   description: "Oficiálne technické listy, návody na inštaláciu a príručky pre Deye solárne meniče a batérie.",
 };
 

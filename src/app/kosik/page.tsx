@@ -3,8 +3,8 @@ import { Footer } from "@/components/footer";
 import { CartContent } from "@/components/cart-content";
 
 export const metadata = {
-  title: "Košík | DeyeSolar.sk",
-  description: "Váš nákupný košík na DeyeSolar.sk - oficiálny importér Deye na Slovensku.",
+  title: "Košík | SK Partner",
+  description: "Váš nákupný košík na SK Partner - oficiálny importér Deye na Slovensku.",
   robots: "noindex, nofollow",
 };
 

@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "Technická podpora | DeyeSolar.sk",
+  title: "Technická podpora | SK Partner",
   description: "Technická podpora pre Deye solárne meniče a batérie. Kontaktujte SK Partner s.r.o. - oficiálneho importéra Deye na Slovensku. Tel: +421 948 450 458",
   keywords: "Deye podpora, servis solárnych meničov, technická pomoc fotovoltaika Slovensko",
   // old_description: "Technická podpora pre Deye solárne meniče a batérie. FAQ, návody, kontakt na technickú podporu.",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: "Ako postupovať pri reklamácii?",
-    answer: "Pri reklamácii nás kontaktujte emailom na info@deyesolar.sk s popisom problému a fotografiami. Priložte kópiu faktúry a sériové číslo zariadenia. Reklamáciu vybavíme do 30 dní od jej prijatia.",
+    answer: "Pri reklamácii nás kontaktujte emailom na sales@sk-partner.sk s popisom problému a fotografiami. Priložte kópiu faktúry a sériové číslo zariadenia. Reklamáciu vybavíme do 30 dní od jej prijatia.",
   },
   {
     question: "Podporuje Deye menič dynamické tariffy?",
@@ -88,10 +88,10 @@ export default function PodporaPage() {
                 Odpovieme do 24 hodín v pracovné dni
               </p>
               <a
-                href="mailto:info@deyesolar.sk"
+                href="mailto:sales@sk-partner.sk"
                 className="mt-4 inline-block text-sm font-medium text-primary hover:underline"
               >
-                info@deyesolar.sk
+                sales@sk-partner.sk
               </a>
             </div>
             <div className="rounded-xl border border-border bg-card p-6">
@@ -192,7 +192,7 @@ export default function PodporaPage() {
           </p>
           <div className="mt-6 flex justify-center gap-4">
             <Button asChild>
-              <a href="mailto:info@deyesolar.sk">Napísať email</a>
+              <a href="mailto:sales@sk-partner.sk">Napísať email</a>
             </Button>
             <Button variant="outline" asChild>
               <a href="tel:+421948450458">Zavolať</a>

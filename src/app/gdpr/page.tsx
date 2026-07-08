@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ochrana osobných údajov (GDPR) | DeyeSolar.sk",
-  description: "Zásady ochrany osobných údajov a GDPR pre DeyeSolar.sk",
+  title: "Ochrana osobných údajov (GDPR) | SK Partner",
+  description: "Zásady ochrany osobných údajov a GDPR pre SK Partner",
 };
 
 export default function GDPRPage() {
@@ -39,7 +39,7 @@ export default function GDPRPage() {
               IČO: 55 285 252 (ďalej len &quot;prevádzkovateľ&quot;).
             </p>
             <p className="mt-4 text-muted-foreground">
-              Kontakt pre otázky týkajúce sa ochrany osobných údajov: info@deyesolar.sk
+              Kontakt pre otázky týkajúce sa ochrany osobných údajov: sales@sk-partner.sk
             </p>
 
             <h2 className="mt-8 text-xl font-semibold text-foreground">2. Aké údaje spracúvame</h2>
@@ -112,7 +112,7 @@ export default function GDPRPage() {
               <li><strong>Právo odvolať súhlas:</strong> kedykoľvek odvolať udelený súhlas</li>
             </ul>
             <p className="mt-4 text-muted-foreground">
-              Pre uplatnenie svojich práv nás kontaktujte na info@deyesolar.sk.
+              Pre uplatnenie svojich práv nás kontaktujte na sales@sk-partner.sk.
             </p>
 
             <h2 className="mt-8 text-xl font-semibold text-foreground">8. Sťažnosť</h2>

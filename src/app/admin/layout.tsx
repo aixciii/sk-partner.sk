@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import AdminLayoutClient from './layout-client'
 
 export const metadata: Metadata = {
-  title: '⚙️ Admin Panel | DeyeSolar.sk',
+  title: '⚙️ Admin Panel | SK Partner',
   robots: 'noindex, nofollow',
 }
 

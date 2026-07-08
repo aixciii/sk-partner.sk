@@ -12,17 +12,17 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await prisma.blogPost.findUnique({ where: { slug } });
-  if (!post) return { title: 'Článok nenájdený | DeyeSolar.sk' };
+  if (!post) return { title: 'Článok nenájdený | SK Partner' };
 
   return {
-    title: `${post.title} | DeyeSolar.sk`,
+    title: `${post.title} | SK Partner`,
     description: post.perex,
-    alternates: { canonical: `https://www.deyesolar.sk/blog/${slug}` },
+    alternates: { canonical: `https://www.sk-partner.sk/blog/${slug}` },
     robots: { index: true, follow: true },
     openGraph: {
       title: post.title,
       description: post.perex,
-      url: `https://www.deyesolar.sk/blog/${slug}`,
+      url: `https://www.sk-partner.sk/blog/${slug}`,
       type: 'article',
       publishedTime: post.publishedAt?.toISOString(),
       ...(post.imageUrl && { images: [{ url: post.imageUrl, alt: post.title }] }),
@@ -42,7 +42,7 @@ export default async function BlogPostPage({ params }: Props) {
     'description': post.perex,
     'datePublished': post.publishedAt?.toISOString(),
     'dateModified': post.updatedAt.toISOString(),
-    'author': { '@type': 'Organization', 'name': 'SK Partner s.r.o.', 'url': 'https://www.deyesolar.sk' },
+    'author': { '@type': 'Organization', 'name': 'SK Partner s.r.o.', 'url': 'https://www.sk-partner.sk' },
     'publisher': { '@type': 'Organization', 'name': 'SK Partner s.r.o.', 'logo': { '@type': 'ImageObject', 'url': 'https://sk-partner.sk/favicon.svg' } },
     ...(post.imageUrl && { 'image': post.imageUrl }),
   };

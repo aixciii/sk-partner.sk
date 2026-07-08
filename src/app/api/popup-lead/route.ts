@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     if (!name || !email) return NextResponse.json({ error: 'Chýbajú údaje' }, { status: 400 });
 
     await t.sendMail({
-      from: `"DeyeSolar.sk" <${process.env.MAIL_FROM}>`,
+      from: `"SK Partner" <${process.env.MAIL_FROM}>`,
       to: process.env.MAIL_TO,
       replyTo: email,
       subject: `🔔 Nový dopyt z popupu — ${name}`,

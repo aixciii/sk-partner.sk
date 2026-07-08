@@ -40,7 +40,7 @@ export default function MojUcetPage() {
 
           <div>
             <h1 className="text-2xl font-bold text-foreground">Môj účet</h1>
-            <p className="text-muted-foreground text-sm mt-1">B2B portál DeyeSolar.sk</p>
+            <p className="text-muted-foreground text-sm mt-1">B2B portál SK Partner</p>
           </div>
 
           <div className={`rounded-xl border p-4 flex items-center gap-3 ${user.approved ? 'border-green-200 bg-green-50 dark:bg-green-950/20' : 'border-amber-200 bg-amber-50 dark:bg-amber-950/20'}`}>

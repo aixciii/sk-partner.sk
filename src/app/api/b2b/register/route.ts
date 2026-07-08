@@ -41,13 +41,13 @@ export async function POST(req: NextRequest) {
         to: 'sales@sk-partner.sk',
         subject: `Nová B2B registrácia: ${name} – ${company || email}`,
         html: `
-          <h2>Nová B2B registrácia na DeyeSolar.sk</h2>
+          <h2>Nová B2B registrácia na SK Partner</h2>
           <p><strong>Meno:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Firma:</strong> ${company || '–'}</p>
           <p><strong>IČO:</strong> ${ico || '–'}</p>
           <p><strong>Telefón:</strong> ${phone || '–'}</p>
-          <p>Pre schválenie prístupu choďte do <a href="https://www.deyesolar.sk/admin">admin panela</a>.</p>
+          <p>Pre schválenie prístupu choďte do <a href="https://www.sk-partner.sk/admin">admin panela</a>.</p>
         `
       })
     } catch (e) { console.error('Email error:', e) }

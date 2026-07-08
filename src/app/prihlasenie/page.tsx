@@ -47,7 +47,7 @@ export default function PrihlaseniePage() {
           <div className="rounded-2xl border border-border bg-card p-8">
             <div className="mb-8">
               <h1 className="text-2xl font-bold text-foreground">Prihlásenie</h1>
-              <p className="mt-2 text-muted-foreground">B2B portál DeyeSolar.sk</p>
+              <p className="mt-2 text-muted-foreground">B2B portál SK Partner</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">

@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Všeobecné obchodné podmienky | DeyeSolar.sk",
-  description: "Všeobecné obchodné podmienky pre nákup na DeyeSolar.sk",
+  title: "Všeobecné obchodné podmienky | SK Partner",
+  description: "Všeobecné obchodné podmienky pre nákup na SK Partner",
 };
 
 export default function VOPPage() {
@@ -49,8 +49,8 @@ export default function VOPPage() {
 
             <h2 className="mt-8 text-xl font-semibold text-foreground">2. Objednávka a uzatvorenie zmluvy</h2>
             <p className="mt-4 text-muted-foreground">
-              2.1. Kupujúci objednáva tovar prostredníctvom internetového obchodu na stránke deyesolar.sk, 
-              emailom na adrese info@deyesolar.sk alebo telefonicky na čísle +421 948 450 458.
+              2.1. Kupujúci objednáva tovar prostredníctvom internetového obchodu na stránke sk-partner.sk, 
+              emailom na adrese sales@sk-partner.sk alebo telefonicky na čísle +421 948 450 458.
             </p>
             <p className="mt-4 text-muted-foreground">
               2.2. Odoslaním objednávky kupujúci potvrdzuje, že sa oboznámil s týmito VOP a súhlasí s nimi.
@@ -114,7 +114,7 @@ export default function VOPPage() {
               6.1. Reklamácie sa riadia Reklamačným poriadkom, ktorý je dostupný na stránke /reklamacie.
             </p>
             <p className="mt-4 text-muted-foreground">
-              6.2. Reklamáciu je možné uplatniť emailom na info@deyesolar.sk alebo telefonicky.
+              6.2. Reklamáciu je možné uplatniť emailom na sales@sk-partner.sk alebo telefonicky.
             </p>
             <p className="mt-4 text-muted-foreground">
               6.3. Lehota na vybavenie reklamácie je 30 dní od jej prijatia.

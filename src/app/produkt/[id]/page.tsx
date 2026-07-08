@@ -27,13 +27,13 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   const product = await fetchProductBySlug(id);
 
   if (!product) {
-    return { title: "Produkt nenájdený | DeyeSolar.sk" };
+    return { title: "Produkt nenájdený | SK Partner" };
   }
 
   const categoryMinPrice = await getCategoryMinPriceForProduct(id);
   const priceLabel = categoryMinPrice ? `od ${Math.round(categoryMinPrice)}€` : null;
 
-  const title = product.metaTitle || `${product.model}${priceLabel ? ` | ${priceLabel}` : ""} | DeyeSolar.sk`;
+  const title = product.metaTitle || `${product.model}${priceLabel ? ` | ${priceLabel}` : ""} | SK Partner`;
   const description = product.metaDescription
     || `${product.model} - ${product.shortSpecs}.${priceLabel ? ` Ceny v kategórii ${priceLabel} bez DPH.` : ""} Skladom na Slovensku, dodanie 1-2 dni. Záruka 10 rokov.`;
   const ogImage = product.ogImage || product.imageUrl || undefined;
@@ -43,16 +43,16 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     description,
     keywords: `${product.model}, ${product.name}, Deye, solárny menič, kúpiť, cena, Slovensko`,
     alternates: {
-      canonical: `https://www.deyesolar.sk/produkt/${id}`,
+      canonical: `https://www.sk-partner.sk/produkt/${id}`,
     },
     robots: {
       index: true,
       follow: true,
     },
     openGraph: {
-      title: product.metaTitle || `${product.model} | DeyeSolar.sk`,
+      title: product.metaTitle || `${product.model} | SK Partner`,
       description,
-      url: `https://www.deyesolar.sk/produkt/${id}`,
+      url: `https://www.sk-partner.sk/produkt/${id}`,
       type: "website",
       ...(ogImage && { images: [{ url: ogImage }] }),
     },
@@ -73,9 +73,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Katalóg", "item": "https://www.deyesolar.sk/katalog" },
-      { "@type": "ListItem", "position": 2, "name": product.categoryName, "item": `https://www.deyesolar.sk/katalog?category=${product.category}` },
-      { "@type": "ListItem", "position": 3, "name": product.model, "item": `https://www.deyesolar.sk/produkt/${id}` }
+      { "@type": "ListItem", "position": 1, "name": "Katalóg", "item": "https://www.sk-partner.sk/katalog" },
+      { "@type": "ListItem", "position": 2, "name": product.categoryName, "item": `https://www.sk-partner.sk/katalog?category=${product.category}` },
+      { "@type": "ListItem", "position": 3, "name": product.model, "item": `https://www.sk-partner.sk/produkt/${id}` }
     ]
   };
 
@@ -95,7 +95,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     },
     "offers": {
       "@type": categoryMinPrice ? "AggregateOffer" : "Offer",
-      "url": `https://www.deyesolar.sk/produkt/${id}`,
+      "url": `https://www.sk-partner.sk/produkt/${id}`,
       "priceCurrency": "EUR",
       ...(categoryMinPrice ? { "lowPrice": categoryMinPrice.toFixed(2) } : {}),
       "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
@@ -103,7 +103,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       "seller": {
         "@type": "Organization",
         "name": "SK Partner s.r.o.",
-        "url": "https://www.deyesolar.sk"
+        "url": "https://www.sk-partner.sk"
       },
       "shippingDetails": {
         "@type": "OfferShippingDetails",

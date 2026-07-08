@@ -48,7 +48,7 @@ export default function AdminLayoutClient({ children }: { children: React.ReactN
           ))}
         </nav>
         <div className="p-3 border-t border-gray-800">
-          <a href="https://www.deyesolar.sk" target="_blank" className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-gray-500 hover:text-white hover:bg-gray-800 w-full transition-colors mb-1">
+          <a href="https://www.sk-partner.sk" target="_blank" className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-gray-500 hover:text-white hover:bg-gray-800 w-full transition-colors mb-1">
             🌐 Otvoriť web
           </a>
           <button onClick={async () => { await fetch('/api/auth/logout', { method: 'POST' }); router.push('/admin/login') }} className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 hover:text-white hover:bg-gray-800 w-full transition-colors">

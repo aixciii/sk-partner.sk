@@ -3,12 +3,12 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Stať sa partnerom | DeyeSolar.sk",
+  title: "Stať sa partnerom | SK Partner",
   description: "Ste inštalačná firma alebo reseller? Staňte sa oficiálnym partnerom SK Partner s.r.o. — jediného importéra Deye na Slovensku. Partnerské ceny, sklad v Bratislave, záruka 10 rokov.",
   openGraph: {
-    title: "Stať sa partnerom | DeyeSolar.sk",
+    title: "Stať sa partnerom | SK Partner",
     description: "Partnerské ceny, sklad v Bratislave, záruka 10 rokov Deye.",
-    url: "https://www.deyesolar.sk/stat-partnerom",
+    url: "https://www.sk-partner.sk/stat-partnerom",
   },
 };
 
@@ -68,7 +68,7 @@ export default function StatPartneromPage() {
             ))}
           </ul>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="mailto:sales@sk-partner.sk?subject=Záujem%20o%20partnerstvo%20—%20DeyeSolar.sk" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary/90 transition-colors">
+            <a href="mailto:sales@sk-partner.sk?subject=Záujem%20o%20partnerstvo%20%E2%80%94%20SK%20Partner" className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary/90 transition-colors">
               Napísať nám →
             </a>
             <a href="tel:+421948450458" className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary text-primary px-6 py-3 text-sm font-medium hover:bg-primary/10 transition-colors">

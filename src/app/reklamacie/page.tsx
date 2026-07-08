@@ -4,8 +4,8 @@ import { Mail, Phone, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Reklamačný poriadok | DeyeSolar.sk",
-  description: "Reklamačný poriadok a postup pri reklamácii tovaru zakúpeného na DeyeSolar.sk",
+  title: "Reklamačný poriadok | SK Partner",
+  description: "Reklamačný poriadok a postup pri reklamácii tovaru zakúpeného na SK Partner",
 };
 
 export default function ReklamaciePage() {
@@ -25,7 +25,7 @@ export default function ReklamaciePage() {
               Reklamacny poriadok
             </h1>
             <p className="mt-4 text-muted-foreground">
-              Postup pri reklamácii tovaru zakúpeného na DeyeSolar.sk
+              Postup pri reklamácii tovaru zakúpeného na SK Partner
             </p>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function ReklamaciePage() {
             <h2 className="text-xl font-semibold text-foreground">1. Všeobecné ustanovenia</h2>
             <p className="mt-4 text-muted-foreground">
               1.1. Tento reklamačný poriadok upravuje spôsob a podmienky reklamácie vád tovaru 
-              zakúpeného u predávajúceho SK Partner s.r.o. prostredníctvom internetového obchodu deyesolar.sk.
+              zakúpeného u predávajúceho SK Partner s.r.o. prostredníctvom internetového obchodu sk-partner.sk.
             </p>
             <p className="mt-4 text-muted-foreground">
               1.2. Reklamačný poriadok sa vzťahuje na tovar, ktorý bol zakúpený u predávajúceho 
@@ -81,7 +81,7 @@ export default function ReklamaciePage() {
               4.1. Pre uplatnenie reklamácie je kupujúci povinný:
             </p>
             <ul className="mt-4 list-disc space-y-2 pl-6 text-muted-foreground">
-              <li>Kontaktovať predávajúceho emailom na info@deyesolar.sk alebo telefonicky na +421 948 450 458</li>
+              <li>Kontaktovať predávajúceho emailom na sales@sk-partner.sk alebo telefonicky na +421 948 450 458</li>
               <li>Uviesť sériové číslo zariadenia</li>
               <li>Priložiť kópiu faktúry alebo iného dokladu o kúpe</li>
               <li>Popísať závadu (čo, kedy, za akých okolností sa prejavuje)</li>
@@ -145,10 +145,10 @@ export default function ReklamaciePage() {
                   <div>
                     <div className="font-medium text-foreground">Email</div>
                     <a
-                      href="mailto:info@deyesolar.sk"
+                      href="mailto:sales@sk-partner.sk"
                       className="text-sm text-primary hover:underline"
                     >
-                      info@deyesolar.sk
+                      sales@sk-partner.sk
                     </a>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export default function ReklamaciePage() {
           </p>
           <div className="mt-6">
             <Button asChild>
-              <a href="mailto:info@deyesolar.sk?subject=Reklamácia">
+              <a href="mailto:sales@sk-partner.sk?subject=Reklamácia">
                 Nahlásiť reklamáciu
               </a>
             </Button>

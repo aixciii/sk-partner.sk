@@ -7,14 +7,14 @@ import type { Metadata } from 'next';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Blog | Fotovoltaika a solárne systémy | DeyeSolar.sk',
+  title: 'Blog | Fotovoltaika a solárne systémy | SK Partner',
   description: 'Odborné články o fotovoltaike, hybridných meničoch a batériových systémoch Deye. Poradíme vám s výberom, inštaláciou a návratnosťou investície.',
   keywords: 'fotovoltaika blog, hybridný menič návod, solárne panely Slovensko, Deye menič recenzia',
-  alternates: { canonical: 'https://www.deyesolar.sk/blog' },
+  alternates: { canonical: 'https://www.sk-partner.sk/blog' },
   openGraph: {
-    title: 'Blog | DeyeSolar.sk',
+    title: 'Blog | SK Partner',
     description: 'Odborné články o fotovoltaike a solárnych systémoch Deye.',
-    url: 'https://www.deyesolar.sk/blog',
+    url: 'https://www.sk-partner.sk/blog',
     type: 'website',
   },
 };

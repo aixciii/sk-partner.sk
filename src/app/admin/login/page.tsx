@@ -42,7 +42,7 @@ export default function AdminLoginPage() {
         <form onSubmit={handleSubmit} className="bg-gray-900 rounded-2xl border border-gray-800 p-6 space-y-4">
           <div>
             <label className="block text-xs text-gray-400 mb-1.5 font-medium">Email</label>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors" placeholder="admin@deyesolar.sk" />
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors" placeholder="admin@sk-partner.sk" />
           </div>
           <div>
             <label className="block text-xs text-gray-400 mb-1.5 font-medium">Heslo</label>

@@ -2,15 +2,17 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Building2, Award, Truck, Users, CheckCircle2, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Navbar } from "@/components/navbar";
+import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "O nás - SK Partner s.r.o. | DeyeSolar.sk",
+  title: "O nás | SK Partner",
   description: "SK Partner s.r.o. je oficiálny importér značky Deye pre Slovensko. IČO: 56032340. Sídlo: Staviteľská ulica 3, 831 04 Bratislava - Rača. Vlastný sklad, dodanie 1-2 dni.",
   keywords: "SK Partner s.r.o., Deye importér Slovensko, solárne meniče Bratislava",
   openGraph: {
-    title: "O nás - SK Partner s.r.o. | DeyeSolar.sk",
+    title: "O nás | SK Partner",
     description: "Oficiálny importér Deye pre Slovensko. Vlastný sklad, B2B ceny, dodanie 1-2 dni.",
-    url: "https://www.deyesolar.sk/o-nas",
+    url: "https://www.sk-partner.sk/o-nas",
     type: "website",
   },
 };
@@ -36,12 +38,14 @@ const values = [
 const milestones = [
   { year: "2024", event: "Založenie spoločnosti SK Partner s.r.o. a rokovania s výrobcom Deye" },
   { year: "2025", event: "Získanie statusu oficiálneho importéra Deye pre SR a budovanie skladu" },
-  { year: "2026", event: "Spustenie B2B e-shopu DeyeSolar.sk a aktívny predaj na Slovensku" },
+  { year: "2026", event: "Spustenie B2B e-shopu SK Partner a aktívny predaj na Slovensku" },
 ];
 
 export default function ONasPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <main className="flex-1 bg-background">
       {/* Hero */}
       <section className="border-b border-border bg-muted/30 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -213,11 +217,13 @@ export default function ONasPage() {
               <Link href="/katalog">Zobraziť katalóg</Link>
             </Button>
             <Button variant="outline" asChild>
-              <a href="mailto:info@deyesolar.sk">Kontaktovať nás</a>
+              <a href="mailto:sales@sk-partner.sk">Kontaktovať nás</a>
             </Button>
           </div>
         </div>
       </section>
     </main>
+      <SiteFooter />
+    </div>
   );
 }
