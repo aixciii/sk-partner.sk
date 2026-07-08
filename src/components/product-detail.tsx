@@ -428,7 +428,7 @@ export function ProductDetail({ product, serverWholesalePrices, priceHidden }: P
 
         <div className="space-y-4">
           <div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-foreground break-all">{product.model}</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-foreground break-all">{product.name}</h1>
             <p className="mt-2 text-lg text-muted-foreground">
               {product.shortLead ? renderBold(product.shortLead) : product.shortSpecs}
             </p>

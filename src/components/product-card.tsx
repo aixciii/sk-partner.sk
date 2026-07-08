@@ -44,7 +44,7 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
         </div>
         <div className="flex flex-1 flex-col p-4">
-          <h3 className="font-semibold text-foreground group-hover:text-primary">{product.model}</h3>
+          <h3 className="font-semibold text-foreground group-hover:text-primary">{product.name}</h3>
           <p className="mt-1 text-xs font-medium text-primary uppercase tracking-wide">{product.brand}</p>
           {product.quickStats && product.quickStats.length > 0 ? (
             <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-muted-foreground">
