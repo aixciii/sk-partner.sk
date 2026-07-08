@@ -441,8 +441,14 @@ export function ProductDetail({ product, serverWholesalePrices, priceHidden }: P
           ) : (
             <div className="rounded-xl border border-border bg-card p-6 space-y-4">
               <div>
-                <p className="text-2xl sm:text-3xl font-bold text-foreground">{formatPrice(product.priceExVat)} € <span className="text-base font-normal text-muted-foreground">bez DPH</span></p>
-                <p className="mt-1 text-muted-foreground">{formatPrice(calculateVatPrice(product.priceExVat, product.vatRate))} € s DPH</p>
+                {product.priceExVat > 0 ? (
+                  <>
+                    <p className="text-2xl sm:text-3xl font-bold text-foreground">{formatPrice(product.priceExVat)} € <span className="text-base font-normal text-muted-foreground">bez DPH</span></p>
+                    <p className="mt-1 text-muted-foreground">{formatPrice(calculateVatPrice(product.priceExVat, product.vatRate))} € s DPH</p>
+                  </>
+                ) : (
+                  <p className="text-2xl sm:text-3xl font-bold text-muted-foreground">Cena na dopyt</p>
+                )}
               </div>
               {product.priceExVat > 0 ? (
                 <div className="flex flex-col gap-3 sm:flex-row">
@@ -460,9 +466,11 @@ export function ProductDetail({ product, serverWholesalePrices, priceHidden }: P
                   Vyžiadať cenovú ponuku
                 </Button>
               )}
-              <Button variant="outline" size="lg" className="w-full gap-2" onClick={() => setModalType("quote")}>
-                Vyžiadať cenovú ponuku
-              </Button>
+              {product.priceExVat > 0 && (
+                <Button variant="outline" size="lg" className="w-full gap-2" onClick={() => setModalType("quote")}>
+                  Vyžiadať cenovú ponuku
+                </Button>
+              )}
             </div>
           )}
 
