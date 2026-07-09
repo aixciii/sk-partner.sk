@@ -7,7 +7,7 @@ interface LogoProps {
 export function Logo({ className, inverted = false }: LogoProps) {
   return (
     <img
-      src={inverted ? "/brand/logo-horizontal-dark.svg" : "/brand/logo-horizontal.svg"}
+      src={inverted ? "/brand/logo-horizontal-dark.svg?v=2" : "/brand/logo-horizontal.svg?v=2"}
       alt="SK Partner"
       className={`h-11 w-auto ${className ?? ""}`}
     />

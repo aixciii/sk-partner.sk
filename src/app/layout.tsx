@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   keywords: "Deye Slovensko, FoxESS distributor, Solis invertor, hybridný invertor B2B, batérie LiFePO4, solárna technika veľkoobchod",
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.svg?v=2', type: 'image/svg+xml' },
       { url: '/brand/favicon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/brand/icon-512.png', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: '/favicon.svg',
+    shortcut: '/favicon.svg?v=2',
     apple: '/brand/apple-touch-icon.png',
   },
   openGraph: {
