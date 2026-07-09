@@ -4,5 +4,5 @@
     <text x="50" y="53" text-anchor="middle" dominant-baseline="central" font-family="Archivo, 'Arial Black', Helvetica, sans-serif" font-weight="800" font-size="42" letter-spacing="-2.5"><tspan fill="#F8FAFC">SK</tspan><tspan fill="#37B27A">P</tspan></text>
   </svg>
   <text x="90" y="45" font-family="Archivo, Helvetica, sans-serif" font-size="40" fill="#EFF2F0" letter-spacing="-0.8"><tspan font-weight="800">SK</tspan><tspan font-weight="500"> Partner</tspan></text>
-  <text x="92" y="69" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" letter-spacing="2.4" fill="#8B98A5">SOLAR &amp; STORAGE DISTRIBUTION</text>
+  <text x="92" y="69" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="13" letter-spacing="1.8" fill="#8B98A5">SOLAR &amp; STORAGE DISTRIBUTION</text>
 </svg>

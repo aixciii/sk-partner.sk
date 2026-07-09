@@ -9,7 +9,7 @@ export function Logo({ className, inverted = false }: LogoProps) {
     <img
       src={inverted ? "/brand/logo-horizontal-dark.svg" : "/brand/logo-horizontal.svg"}
       alt="SK Partner"
-      className={`h-9 w-auto ${className ?? ""}`}
+      className={`h-10 w-auto ${className ?? ""}`}
     />
   )
 }
