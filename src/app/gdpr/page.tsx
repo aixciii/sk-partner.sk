@@ -17,11 +17,11 @@ export default function GDPRPage() {
             className="mb-6 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" />
-            Spat na hlavnu stranku
+            Späť na hlavnú stránku
           </Link>
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
-              Ochrana osobnych udajov
+              Ochrana osobných údajov
             </h1>
             <p className="mt-4 text-muted-foreground">
               Zásady spracovania osobných údajov v súlade s GDPR
@@ -35,8 +35,9 @@ export default function GDPRPage() {
           <div className="prose prose-gray max-w-none">
             <h2 className="text-xl font-semibold text-foreground">1. Prevádzkovateľ</h2>
             <p className="mt-4 text-muted-foreground">
-              Prevádzkovateľom osobných údajov je spoločnosť SK Partner s.r.o., so sídlom v Bratislave, 
-              IČO: 55 285 252 (ďalej len &quot;prevádzkovateľ&quot;).
+              Prevádzkovateľom osobných údajov je spoločnosť SK Partner s.r.o., so sídlom
+              Staviteľská ulica 3, 831 04 Bratislava - Rača, IČO: 55 285 252
+              (ďalej len &quot;prevádzkovateľ&quot;).
             </p>
             <p className="mt-4 text-muted-foreground">
               Kontakt pre otázky týkajúce sa ochrany osobných údajov: sales@sk-partner.sk
@@ -132,6 +133,11 @@ export default function GDPRPage() {
               <li><strong>Analytické cookies:</strong> pomáhajú nám pochopiť, ako návštevníci používajú stránku</li>
               <li><strong>Funkčné cookies:</strong> umožňujú zapamätať vaše preferencie</li>
             </ul>
+            <p className="mt-4 text-muted-foreground">
+              Iné ako nevyhnutné cookies používame len s vaším súhlasom, ktorý môžete udeliť
+              alebo odmietnuť v cookie lište pri prvej návšteve stránky. Svoj výber môžete
+              kedykoľvek zmeniť vymazaním cookies vo svojom prehliadači.
+            </p>
 
             <h2 className="mt-8 text-xl font-semibold text-foreground">10. Bezpečnosť údajov</h2>
             <p className="mt-4 text-muted-foreground">

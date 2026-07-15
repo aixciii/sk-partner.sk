@@ -17,11 +17,11 @@ export default function VOPPage() {
             className="mb-6 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" />
-            Spat na hlavnu stranku
+            Späť na hlavnú stránku
           </Link>
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
-              Vseobecne obchodne podmienky
+              Všeobecné obchodné podmienky
             </h1>
             <p className="mt-4 text-muted-foreground">
               Platné od 1.1.2026
@@ -40,8 +40,9 @@ export default function VOPPage() {
               ktorej predmetom je kúpa a predaj tovaru na internetovej stránke elektronického obchodu predávajúceho.
             </p>
             <p className="mt-4 text-muted-foreground">
-              1.2. Predávajúcim je spoločnosť SK Partner s.r.o., so sídlom v Bratislave, 
-              IČO: 55 285 252, DIČ: 2121975977, IČ DPH: SK2121975977 (ďalej len &quot;predávajúci&quot;).
+              1.2. Predávajúcim je spoločnosť SK Partner s.r.o., so sídlom Staviteľská ulica 3,
+              831 04 Bratislava - Rača, IČO: 55 285 252, DIČ: 2121975977, IČ DPH: SK2121975977
+              (ďalej len &quot;predávajúci&quot;).
             </p>
             <p className="mt-4 text-muted-foreground">
               1.3. Kupujúcim je podnikateľ alebo spotrebiteľ (ďalej len &quot;kupujúci&quot;).
@@ -109,41 +110,66 @@ export default function VOPPage() {
               5.4. Pre uplatnenie záruky je nutné predložiť doklad o kúpe a sériové číslo zariadenia.
             </p>
 
-            <h2 className="mt-8 text-xl font-semibold text-foreground">6. Reklamácie</h2>
+            <h2 className="mt-8 text-xl font-semibold text-foreground">6. Odstúpenie od zmluvy</h2>
             <p className="mt-4 text-muted-foreground">
-              6.1. Reklamácie sa riadia Reklamačným poriadkom, ktorý je dostupný na stránke /reklamacie.
+              6.1. Kupujúci, ktorý je spotrebiteľom, má právo odstúpiť od zmluvy uzavretej na diaľku
+              bez uvedenia dôvodu do 14 dní odo dňa prevzatia tovaru, v súlade so zákonom
+              č. 102/2014 Z. z. o ochrane spotrebiteľa pri predaji tovaru na diaľku.
             </p>
             <p className="mt-4 text-muted-foreground">
-              6.2. Reklamáciu je možné uplatniť emailom na sales@sk-partner.sk alebo telefonicky.
+              6.2. Odstúpenie od zmluvy je možné uplatniť písomne alebo emailom na sales@sk-partner.sk.
+              Tovar je kupujúci povinný vrátiť najneskôr do 14 dní odo dňa odstúpenia od zmluvy,
+              nepoškodený a podľa možnosti v pôvodnom obale. Náklady na vrátenie tovaru znáša kupujúci.
             </p>
             <p className="mt-4 text-muted-foreground">
-              6.3. Lehota na vybavenie reklamácie je 30 dní od jej prijatia.
+              6.3. Predávajúci vráti kupujúcemu všetky prijaté platby najneskôr do 14 dní odo dňa
+              doručenia oznámenia o odstúpení od zmluvy, nie však skôr, ako mu je tovar doručený späť.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              6.4. Právo na odstúpenie od zmluvy podľa tohto článku sa nevzťahuje na kupujúceho,
+              ktorý je podnikateľom a tovar nakupuje v rámci svojej podnikateľskej činnosti.
             </p>
 
-            <h2 className="mt-8 text-xl font-semibold text-foreground">7. Ochrana osobných údajov</h2>
+            <h2 className="mt-8 text-xl font-semibold text-foreground">7. Reklamácie</h2>
             <p className="mt-4 text-muted-foreground">
-              7.1. Spracovanie osobných údajov sa riadi Zásadami ochrany osobných údajov (GDPR), 
+              7.1. Reklamácie sa riadia Reklamačným poriadkom, ktorý je dostupný na stránke /reklamacie.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              7.2. Reklamáciu je možné uplatniť emailom na sales@sk-partner.sk alebo telefonicky.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              7.3. Lehota na vybavenie reklamácie je 30 dní od jej prijatia.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              7.4. Spotrebiteľ má právo obrátiť sa na subjekt alternatívneho riešenia sporov,
+              ktorým je Slovenská obchodná inšpekcia (www.soi.sk), v súlade so zákonom
+              č. 391/2015 Z. z., alebo využiť platformu riešenia sporov online na ec.europa.eu/consumers/odr.
+            </p>
+
+            <h2 className="mt-8 text-xl font-semibold text-foreground">8. Ochrana osobných údajov</h2>
+            <p className="mt-4 text-muted-foreground">
+              8.1. Spracovanie osobných údajov sa riadi Zásadami ochrany osobných údajov (GDPR),
               ktoré sú dostupné na stránke /gdpr.
             </p>
 
-            <h2 className="mt-8 text-xl font-semibold text-foreground">8. Záverečné ustanovenia</h2>
+            <h2 className="mt-8 text-xl font-semibold text-foreground">9. Záverečné ustanovenia</h2>
             <p className="mt-4 text-muted-foreground">
-              8.1. Tieto VOP nadobúdajú platnosť a účinnosť dňom ich zverejnenia na stránke predávajúceho.
+              9.1. Tieto VOP nadobúdajú platnosť a účinnosť dňom ich zverejnenia na stránke predávajúceho.
             </p>
             <p className="mt-4 text-muted-foreground">
-              8.2. Predávajúci si vyhradzuje právo na zmenu týchto VOP. Zmena VOP bude zverejnená 
+              9.2. Predávajúci si vyhradzuje právo na zmenu týchto VOP. Zmena VOP bude zverejnená
               na stránke predávajúceho.
             </p>
             <p className="mt-4 text-muted-foreground">
-              8.3. Vzťahy neupravené týmito VOP sa riadia príslušnými ustanoveniami Občianskeho 
+              9.3. Vzťahy neupravené týmito VOP sa riadia príslušnými ustanoveniami Občianskeho
               zákonníka, Obchodného zákonníka a ďalšími právnymi predpismi Slovenskej republiky.
             </p>
             <p className="mt-4 text-muted-foreground">
-              8.4. V prípade sporu je príslušný súd Slovenskej republiky podľa sídla predávajúceho.
+              9.4. V prípade sporu je príslušný súd Slovenskej republiky podľa sídla predávajúceho.
             </p>
 
             <p className="mt-8 text-sm text-muted-foreground">
-              Posledná aktualizácia: 1.1.2026
+              Posledná aktualizácia: 15.7.2026
             </p>
           </div>
         </div>

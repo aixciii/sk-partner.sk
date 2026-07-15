@@ -23,6 +23,9 @@ const nextConfig = {
       { source: '/servis-i-pidtrymka-sonyachnogo-obladnannya-deye-ukrayina-2/', destination: '/podpora', permanent: true },
       { source: '/sonyachna-energetyka-kontakty-deye-solar-postachalnyk-obladnannya-ukrayina', destination: '/o-nas', permanent: true },
       { source: '/sonyachna-energetyka-kontakty-deye-solar-postachalnyk-obladnannya-ukrayina/', destination: '/o-nas', permanent: true },
+      // Navbar odkazy bez vlastnej stránky
+      { source: '/dilerom', destination: '/stat-partnerom', permanent: false },
+      { source: '/dodanie', destination: '/vop', permanent: false },
       // Staré WordPress URL
       { source: '/product-category/vsi-tovary', destination: '/katalog', permanent: true },
       { source: '/product-category/vsi-tovary/', destination: '/katalog', permanent: true },

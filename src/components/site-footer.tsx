@@ -3,13 +3,14 @@ import { ConsultationForm } from "@/components/consultation-form"
 import { Logo } from "@/components/logo"
 
 const infoLinks = [
-  "Dílerom",
-  "O spoločnosti",
-  "Blog",
-  "Dodanie",
-  "VOP",
-  "GDPR",
-  "Kontakt",
+  { label: "Dílerom", href: "/stat-partnerom" },
+  { label: "O spoločnosti", href: "/o-nas" },
+  { label: "Blog", href: "/blog" },
+  { label: "Dodanie", href: "/vop" },
+  { label: "Reklamácie", href: "/reklamacie" },
+  { label: "VOP", href: "/vop" },
+  { label: "GDPR", href: "/gdpr" },
+  { label: "Kontakt", href: "/kontakt" },
 ]
 const brandLinks = [
   { label: "Deye", href: "/katalog?brand=deye" },
@@ -18,7 +19,12 @@ const brandLinks = [
   { label: "Dyness", href: "/katalog?brand=dyness" },
   { label: "BYD", href: "/katalog?brand=byd" },
 ]
-const categoryLinks = ["Hybridné", "Sieťové", "Batérie"]
+const categoryLinks = [
+  { label: "Hybridné meniče LV", href: "/katalog/hybridne-lv-3f" },
+  { label: "Hybridné meniče HV", href: "/katalog/hybridne-hv" },
+  { label: "On-Grid meniče", href: "/katalog/on-grid" },
+  { label: "Batérie", href: "/katalog/baterie-lv" },
+]
 
 export function SiteFooter() {
   return (
@@ -63,9 +69,9 @@ export function SiteFooter() {
             </h3>
             <ul className="mt-5 space-y-3 text-sm">
               {infoLinks.map((l) => (
-                <li key={l}>
-                  <a href="#" className="transition-colors hover:text-primary">
-                    {l}
+                <li key={l.label}>
+                  <a href={l.href} className="transition-colors hover:text-primary">
+                    {l.label}
                   </a>
                 </li>
               ))}
@@ -91,9 +97,9 @@ export function SiteFooter() {
             </h3>
             <ul className="mt-5 space-y-3 text-sm">
               {categoryLinks.map((l) => (
-                <li key={l}>
-                  <a href="#" className="transition-colors hover:text-primary">
-                    {l}
+                <li key={l.label}>
+                  <a href={l.href} className="transition-colors hover:text-primary">
+                    {l.label}
                   </a>
                 </li>
               ))}

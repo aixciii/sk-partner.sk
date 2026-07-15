@@ -4,18 +4,22 @@ const categories = [
   {
     title: "Batériové úložiská",
     icon: BatteryCharging,
+    href: "/katalog/baterie-lv",
   },
   {
     title: "Hybridné invertory",
     icon: Zap,
+    href: "/katalog/hybridne-lv-3f",
   },
   {
     title: "Sieťové invertory",
     icon: Grid3x3,
+    href: "/katalog/on-grid",
   },
   {
     title: "Systémy ukladania energie",
     icon: Server,
+    href: "/katalog/komercne-riesenia",
   },
 ]
 
@@ -58,7 +62,7 @@ export function Hero() {
           {categories.map((cat) => (
             <a
               key={cat.title}
-              href="/katalog/hybridne-invertory"
+              href={cat.href}
               className="group relative flex aspect-[4/3] flex-col justify-between overflow-hidden rounded-xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-accent text-accent-foreground ring-1 ring-inset ring-primary/10 transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
